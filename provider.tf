@@ -2,11 +2,11 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~>4.16"
+      version = "5.74.0"
     }
     tls = {
       source  = "hashicorp/tls" 
-      version = ">=3.1.0"
+      version = "4.0.6"
     }
   }
 }
@@ -25,4 +25,8 @@ terraform {
 # Configure the AWS Provider 
 provider "aws" {
   region = var.region
+}
+
+# Configure TLS Provider
+provider "tls" {
 }
